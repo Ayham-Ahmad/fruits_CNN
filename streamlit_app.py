@@ -13,10 +13,11 @@ st.write("Fruits to classify: Acerolas, Apples, Apricots, Avocados, Bananas")
 # File uploader for image (accept jpg, png, jpeg)
 uploaded_file = st.file_uploader("Upload a fruit image (jpg, jpeg, png)", type=['jpg', 'jpeg', 'png'])
 
+
 # Load the CNN model using st.cache_resource
 @st.cache_resource
 def load_model():
-    model = joblib.load(r'workspaces/fruits_CNN/fruit_CNN_V1.pkl')
+    model = joblib.load(r'/workspaces/fruits_CNN/fruit_CNN_V1.pkl')
     model.eval()  # Set the model to evaluation mode
     return model
 
