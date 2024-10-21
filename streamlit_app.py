@@ -16,7 +16,7 @@ uploaded_file = st.file_uploader("Upload a fruit image (jpg, jpeg, png)", type=[
 # Load the CNN model using st.cache_resource
 @st.cache_resource
 def load_model():
-    model = joblib.load(r'/workspaces/fruits_CNN/fruit_CNN_V1.pkl')
+    model = joblib.load(r'workspaces/fruits_CNN/fruit_CNN_V1.pkl')
     model.eval()  # Set the model to evaluation mode
     return model
 
